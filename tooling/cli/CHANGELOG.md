@@ -1,5 +1,37 @@
 # @chakra-ui/cli
 
+## 2.1.0
+
+### Minor Changes
+
+- [#6117](https://github.com/chakra-ui/chakra-ui/pull/6117)
+  [`154fee7f1`](https://github.com/chakra-ui/chakra-ui/commit/154fee7f128b242babb77f3c60a8dfd82c46d519)
+  Thanks [@TimKolberger](https://github.com/TimKolberger)! - New watch flag for
+  the tokens command. You can specify a directory path to watch for changes. It
+  defaults to the parent dir of `<source>`, e.g. `src/theme/theme.ts` =>
+  `src/theme`.
+
+  ```shell
+  > chakra-cli tokens src/theme/theme.ts --watch
+
+  > chakra-cli tokens --help
+  Usage: chakra-cli tokens [options] <source>
+
+  Options:
+    --out <path>              output file e.g. node_modules/@chakra-ui/styled-system/dist/declarations/src/theming.types.d.ts
+    --strict-component-types  Generate strict types for props variant and size
+    --watch [path]            Watch directory for changes and rebuild
+    -h, --help                display help for command
+
+  ```
+
+### Patch Changes
+
+- [#6117](https://github.com/chakra-ui/chakra-ui/pull/6117)
+  [`5ce803dde`](https://github.com/chakra-ui/chakra-ui/commit/5ce803dde0efcbe3c0abd701d6c9fea2997d36e3)
+  Thanks [@TimKolberger](https://github.com/TimKolberger)! - Fixed an issue
+  where the tokens command failed with `SyntaxError: Undefined label 'e'`.
+
 ## 2.0.0
 
 ### Major Changes
