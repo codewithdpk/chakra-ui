@@ -1,7 +1,24 @@
-## 24-05-2022
+## 29-05-2022
 
-`@chakra-ui/react@2.1.2`
+**Cli** `v2.1.0`
 
-**Toast** `v2.0.5`
+- New watch flag for the tokens command. You can specify a directory path to watch
+  for changes. It defaults to the parent dir of `<source>`, e.g.
+  `src/theme/theme.ts` => `src/theme`.
 
-- Fix SSR errors with toast and `use-sync-external-store` due to lack of `getServerSnapshot`
+```shell
+> chakra-cli tokens src/theme/theme.ts --watch
+
+> chakra-cli tokens --help
+Usage: chakra-cli tokens [options] <source>
+
+Options:
+  --out <path>              output file e.g. node_modules/@chakra-ui/styled-system/dist/declarations/src/theming.types.d.ts
+  --strict-component-types  Generate strict types for props variant and size
+  --watch [path]            Watch directory for changes and rebuild
+  -h, --help                display help for command
+
+```
+
+- Fixed an issue where the tokens command failed with
+  `SyntaxError: Undefined label 'e'`.
